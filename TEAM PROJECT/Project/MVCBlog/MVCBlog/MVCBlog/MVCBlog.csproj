@@ -219,6 +219,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Olympic_Rings.svg.png" />
     <Content Include="Images\rio_2016_summer_olympics-HD-2.jpg" />
     <Content Include="Images\rio_2016_summer_olympics-HD.jpg" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
