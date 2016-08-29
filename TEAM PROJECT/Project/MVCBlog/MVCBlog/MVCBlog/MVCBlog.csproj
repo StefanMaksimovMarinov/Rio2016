@@ -219,6 +219,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\800px-2002_Winter_Olympics_flame.jpg" />
+    <Content Include="Images\800px-Baron_Pierre_de_Coubertin.jpg" />
+    <Content Include="Images\Athens_1896_report_cover.jpg" />
     <Content Include="Images\Olympic_Rings.svg.png" />
     <Content Include="Images\rio_2016_summer_olympics-HD-2.jpg" />
     <Content Include="Images\rio_2016_summer_olympics-HD.jpg" />
