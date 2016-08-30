@@ -4,7 +4,7 @@
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content, .body-posts {
+.body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -37,9 +37,4 @@ tr.row {
 
 .post>h2 {
     margin-top: 15px;
-}
-
-.post>div>img {
-    float:none;
-    padding-left:35px;
 }
