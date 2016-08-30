@@ -15,7 +15,7 @@ namespace MVCBlog.Classes
             return shortText;
         }
 
-        public static string CutAccountName(string text, int maxLength = 15)
+        public static string CutAccountName(string text, int maxLength = 10)
         {
             if (text == null || text.Length <= maxLength)
                 return text;

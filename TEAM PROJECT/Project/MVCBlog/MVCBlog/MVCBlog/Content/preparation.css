@@ -1,0 +1,14 @@
+﻿.preparation-img-content > div > img {
+    width: 100%;
+    margin-bottom: 29px;
+}
+.preparation-text-content {
+    background-color: #66ff66;
+}
+.preparation-content {
+    padding: 10px;
+}
+.preparation-img-content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
