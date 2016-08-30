@@ -8,23 +8,28 @@
 
 @using (Html.BeginForm("Create", "Photoalbums", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    @Html.ValidationSummary(true)
-    <table>
-        <tr>
-            <td>Select File : </td>
-            <td>
-                @Html.TextBoxFor(model => model.File, new { type = "file" })
-                @Html.ValidationMessage("CustomError")
-            </td>
-            <td>
-                <input type="submit" value="Качване" />
-            </td>
-        </tr>
-    </table>
-}
+    <div class="form-horizontal">
+        <h4>Снимка</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @{string Снимка = "";}
+            @Html.LabelFor(model => Снимка, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.File, new { @class = "form-control", type = "file" })
+                @Html.ValidationMessageFor(model => model.FileName, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Качване" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Назад към снимки", "Index")
 </div>
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")

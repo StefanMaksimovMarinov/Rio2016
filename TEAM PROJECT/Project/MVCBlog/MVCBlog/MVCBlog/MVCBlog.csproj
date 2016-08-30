@@ -209,7 +209,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\PhotoalbumsController.cs" />
+    <Compile Include="Models\Photoalbum.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -290,6 +290,7 @@
     <Content Include="Views\Home\Preparation.cshtml" />
     <Content Include="Views\Photoalbums\Create.cshtml" />
     <Content Include="Views\Photoalbums\Index.cshtml" />
+    <Content Include="Views\Photoalbums\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
