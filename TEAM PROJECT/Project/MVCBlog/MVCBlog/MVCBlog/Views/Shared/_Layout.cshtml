@@ -21,10 +21,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><img src="~/Images/Olympic_Rings.svg.png" alt="Olympic Rings" height="32" width="62" /></li>
                     <li>@Html.ActionLink("Начало", "Index", "Home")</li>
                     <li>@Html.ActionLink("Публикации", "Index", "Posts")</li>
                     <li>@Html.ActionLink("Нов пост", "Create", "Posts")</li>
-                    <li>@Html.ActionLink("Фотоалбум", "Index", "Photoalbums")</li>
+                    <li>@Html.ActionLink("Фотоалбум", "Photoalbum", "Home")</li>
                     <li>@Html.ActionLink("Класиране", "Ranking", "Home")</li>
                     <li>@Html.ActionLink("Участници", "Players", "Home")</li>
                     <li>@Html.ActionLink("История", "History", "Home")</li>
