@@ -6,32 +6,31 @@
     ViewBag.Title = "Фотоалбум";
 }
 
-<body class="body-posts">
-    <h2>Фотоалбум</h2>
 
-    <p>
-        @Html.ActionLink("Добави снимкa", "Create")
-    </p>
+<h2>Фотоалбум</h2>
 
-    <table>
-        @{
-            int j = 0;
-            for (int i = 0; i < Model.Count(); i += 4)
-            {
-                j = i;
-                <tr>
-                    @while (j < i + 4 && j < Model.Count())
+<p>
+    @Html.ActionLink("Добави снимкa", "Create")
+</p>
+
+<table>
+    @{
+        int j = 0;
+        for (int i = 0; i < Model.Count(); i += 4)
+        {
+            j = i;
+            <tr>
+                @while (j < i + 4 && j < Model.Count())
                 {
-                        <td>
-                            <img src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData, 0, Model[j].ImageData.Length) " width="200" height="200" />
-                            <br />
-                            @Html.ActionLink("Изтрий", "Delete", new { id = Model[j].ImageId })
-
-                        </td>
-                        j++;
-                    }
-                </tr>
-            }
+                    <td>
+                        <img src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData, 0, Model[j].ImageData.Length) " width="200" height="200" />
+                        <br />
+                        @Html.ActionLink("Изтрий", "Delete", new { id = Model[j].ImageId })
+                        
+                    </td>
+                    j++;
+                }
+            </tr>
         }
-    </table>
-</body>
+    }
+</table>
