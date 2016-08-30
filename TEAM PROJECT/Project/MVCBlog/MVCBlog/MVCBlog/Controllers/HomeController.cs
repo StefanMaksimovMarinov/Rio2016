@@ -23,6 +23,11 @@ namespace MVCBlog.Controllers
             return View();
         }
 
+        public ActionResult Photoalbum()
+        {
+            return View();
+        }
+
         public ActionResult Ranking()
         {
             return View();

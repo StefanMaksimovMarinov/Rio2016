@@ -37,6 +37,7 @@ namespace MVCBlog.Controllers
         }
 
         // GET: Posts/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -46,12 +47,14 @@ namespace MVCBlog.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Body,Date")] Post post)
+        public ActionResult Create([Bind(Include = "Id,Title,Body")] Post post)
         {
             if (ModelState.IsValid)
             {
                 post.Author = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+                post.Date = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
