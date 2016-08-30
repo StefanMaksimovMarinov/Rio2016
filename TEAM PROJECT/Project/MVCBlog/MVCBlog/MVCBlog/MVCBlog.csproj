@@ -284,7 +284,6 @@
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
     <Content Include="Views\Home\History.cshtml" />
-    <Content Include="Views\Home\Photoalbum.cshtml" />
     <Content Include="Views\Home\Ranking.cshtml" />
     <Content Include="Views\Home\Players.cshtml" />
     <Content Include="Views\Home\Preparation.cshtml" />

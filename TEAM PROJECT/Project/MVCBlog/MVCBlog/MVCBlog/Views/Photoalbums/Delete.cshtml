@@ -3,24 +3,25 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Изтриване на пост</h2>
+<body class="body-posts">
+    <h2>Изтриване на пост</h2>
 
-<h3>Сигурни ли сте, че желаете да изтриете това?</h3>
-<div>
-    <h4>Пост</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dd>
-            @Html.DisplayFor(model => model.ImageData)
-        </dd>
-    </dl>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
+    <h3>Сигурни ли сте, че желаете да изтриете това?</h3>
+    <div>
+        <h4>Пост</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dd>
+                @Html.DisplayFor(model => model.ImageData)
+            </dd>
+        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Изтрий" class="btn btn-default" /> |
-            @Html.ActionLink("Обратно към снимки", "Index")
-        </div>
-    }
-
+            <div class="form-actions no-color">
+                <input type="submit" value="Изтрий" class="btn btn-default" /> |
+                @Html.ActionLink("Обратно към снимки", "Index")
+            </div>
+        }
+</body>
