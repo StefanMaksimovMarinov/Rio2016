@@ -20,11 +20,13 @@ namespace MVCBlog.Controllers
             return View(all);
         }
 
+        // GET: Photoalbums/Create
         public ActionResult Create()
         {
             return View();
         }
 
+        // POST: Photoalbums/Create
         [HttpPost]
         public ActionResult Create(HttpPostedFileBase file)
         {
@@ -50,6 +52,8 @@ namespace MVCBlog.Controllers
             return RedirectToAction("Index");
         }
 
+
+        // POST: Photoalbums/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -64,12 +68,23 @@ namespace MVCBlog.Controllers
             return View(image);
         }
 
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Photoalbum image = db.Images.Find(id);
             db.Images.Remove(image);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }  

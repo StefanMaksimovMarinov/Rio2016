@@ -10,7 +10,17 @@
     <h4>Пост</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        <dd>
             @Html.DisplayFor(model => model.ImageData)
-        </dt>
+        </dd>
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Изтрий" class="btn btn-default" /> |
+            @Html.ActionLink("Обратно към снимки", "Index")
+        </div>
+    }
 
