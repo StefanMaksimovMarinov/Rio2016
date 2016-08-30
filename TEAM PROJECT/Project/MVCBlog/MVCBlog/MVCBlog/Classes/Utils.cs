@@ -14,5 +14,13 @@ namespace MVCBlog.Classes
             var shortText = text.Substring(0, maxLength) + "...";
             return shortText;
         }
+
+        public static string CutAccountName(string text, int maxLength = 15)
+        {
+            if (text == null || text.Length <= maxLength)
+                return text;
+            var shortText = text.Substring(0, maxLength) + "...";
+            return shortText;
+        }
     }
 }

@@ -1,11 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Web;
 
 namespace MVCBlog.Models
 {
     public class Photoalbum
     {
+        [Key]
+        public int ImageId { get; set; }
+        public int ImageSize { get; set; }
+        [StringLength(200)]
+        public string FileName { get; set; }
+        public byte[] ImageData { get; set; }
+        [NotMapped]
+        public HttpPostedFileBase File { get; set; }
     }
 }
