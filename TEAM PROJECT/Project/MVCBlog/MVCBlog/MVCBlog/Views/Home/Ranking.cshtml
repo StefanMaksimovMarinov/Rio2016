@@ -2,33 +2,34 @@
 @{
     ViewBag.Title = "Класиране по медали";
 }
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table Niki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
 <body class="body-posts">
     <h2>Класиране по медали</h2>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Table Niki</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="~/Content/Site.css" rel="stylesheet" />
-        <style>
-            table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-            }
-
-            tr:nth-child(even) {
-                background-color: #dddddd;
-            }
-        </style>
-    </head>
-    <body>
 
         <table>
             <tr>
@@ -115,8 +116,6 @@
             <div class="post col-md-6">
                 <img src="http://ssl.gstatic.com/onebox/media/olympics/photos/o16/live/MTZSPDEC8MBLXIME_768x432.JPG" alt="Rio 2016">
 
-                <div class="row">
-                    <div class="post col-md-6">
                         <div>
                             <h1>
                                 Юсейн Болт спечели осмото си олимпийско злато след победа и на 200 м в Рио
@@ -135,8 +134,6 @@
                                 Болт беше посрещнат и изпратен като герой. Дълго след края на финала публиката скандираше името му.
                             </p>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </body>
+</body>
