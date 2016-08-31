@@ -11,16 +11,28 @@ namespace MVCBlog.Classes
         {
             if (text == null || text.Length <= maxLength)
                 return text;
+            
             var shortText = text.Substring(0, maxLength) + "...";
             return shortText;
         }
 
         public static string CutAccountName(string text, int maxLength = 10)
         {
+            var nameWithoutEmail = text.Substring(0, text.IndexOf('@'));
             if (text == null || text.Length <= maxLength)
-                return text;
-            var shortText = text.Substring(0, maxLength) + "...";
-            return shortText;
+            {
+                return nameWithoutEmail;
+            }
+            if (nameWithoutEmail.Length>=maxLength)
+            {
+                var shortText = nameWithoutEmail.Substring(0, maxLength) + "...";
+                return shortText;
+            }
+            if (nameWithoutEmail.Length < maxLength)
+            {
+                return nameWithoutEmail;
+            }           
+            return null;
         }
     }
 }
