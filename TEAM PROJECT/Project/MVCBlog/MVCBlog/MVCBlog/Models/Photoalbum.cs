@@ -13,6 +13,7 @@ namespace MVCBlog.Models
         public string FileName { get; set; }
         public byte[] ImageData { get; set; }
         [NotMapped]
+        [Display(Name = "Снимка")]
         public HttpPostedFileBase File { get; set; }
     }
 }

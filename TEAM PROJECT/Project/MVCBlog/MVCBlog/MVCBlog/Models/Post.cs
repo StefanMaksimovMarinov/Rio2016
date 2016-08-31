@@ -13,13 +13,16 @@ namespace MVCBlog.Models
 
         [Required]
         [StringLength(200)]
+        [Display(Name = "Заглавие")]
         public string Title { get; set; }
 
         [Required]
         [DataType(DataType.MultilineText)]
+        [Display(Name = "Съдържание")]
         public string Body { get; set; }
 
         [Required]
+        [Display(Name = "Дата")]
         public DateTime Date { get; set; }
 
         public ApplicationUser Author { get; set; }
