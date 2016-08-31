@@ -1,0 +1,14 @@
+﻿@model MVCBlog.Models.Photoalbum
+@{
+    ViewBag.Title = "View";
+}
+<body class="body-posts">
+    <h2>Преглед</h2>
+    <div class="form-actions no-color">
+        @Html.ActionLink("Обратно към снимки", "Index")
+    </div>
+    <hr />
+    <div>
+        <img src="data:image/png;base64,@Convert.ToBase64String(Model.ImageData, 0, Model.ImageData.Length) " width="100%" height="100%" />
+    </div>
+</body>

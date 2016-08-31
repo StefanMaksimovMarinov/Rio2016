@@ -9,19 +9,19 @@
 
 @foreach (var post in Model)
 {
-<div class="row">
-    <div class="post col-md-6">
-        <h2>@post.Title</h2>
-        <div>
-            Posted on <i>@post.Date</i>
-            @if (post.Author != null)
-            {
-                @:by <i>@post.Author.UserName</i>
-            } 
-        </div>
-        <div>
-            @Utils.CutText(post.Body)
+    <div class="row">
+        <div class="post col-md-6">
+            <h2>@post.Title</h2>
+            <div>
+                Posted on <i>@post.Date</i>
+                @if (post.Author != null)
+                {
+                    @:by <i>@post.Author.UserName</i>
+            }
+            </div>
+            <div>
+                @Utils.CutText(post.Body)
+            </div>
         </div>
     </div>
-</div>
 }

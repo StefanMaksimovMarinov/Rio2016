@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using MVCBlog.Models;
+﻿using System.Globalization;
 
 namespace MVCBlog.Controllers
 {
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Net;
+    using System.Web.Mvc;
+    using Models;
+
     public class PostsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -49,12 +48,18 @@ namespace MVCBlog.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Body")] Post post)
+        public ActionResult Create([Bind(Include = "Id,Title,Body")] Post post, FormCollection form)
         {
             if (ModelState.IsValid)
             {
+                var dateStr = form["Date"].Replace("г.", "").Replace("PM", "").Replace("AM", "");
+
+                DateTime postDate =
+             DateTime.ParseExact(dateStr, "yyyy/MM/dd HH:mm", CultureInfo.InstalledUICulture);
+
+
                 post.Author = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
-                post.Date = DateTime.Now;
+                post.Date = postDate;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
