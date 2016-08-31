@@ -19,7 +19,7 @@ namespace MVCBlog.Controllers
             all = db.Images.ToList();
             return View(all);
         }
-
+        [Authorize]
         // GET: Photoalbums/Create
         public ActionResult Create()
         {
@@ -54,6 +54,7 @@ namespace MVCBlog.Controllers
 
 
         // GET: Photoalbums/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -89,6 +90,7 @@ namespace MVCBlog.Controllers
         }
 
         // GET: Photoalbums/View/ 
+        [Authorize]
         public ActionResult View(int? id)
         {
             Photoalbum image = db.Images.Find(id);
