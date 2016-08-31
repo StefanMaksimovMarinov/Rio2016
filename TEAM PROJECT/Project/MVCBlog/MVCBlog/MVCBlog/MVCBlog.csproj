@@ -321,6 +321,7 @@
     <Content Include="Views\Photoalbums\Create.cshtml" />
     <Content Include="Views\Photoalbums\Index.cshtml" />
     <Content Include="Views\Photoalbums\Delete.cshtml" />
+    <Content Include="Views\Photoalbums\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

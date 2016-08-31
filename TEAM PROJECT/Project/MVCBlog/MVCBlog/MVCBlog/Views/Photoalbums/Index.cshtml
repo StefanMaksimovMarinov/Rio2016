@@ -2,6 +2,7 @@
 @using MVCBlog.Models;
 
 @model List<MVCBlog.Models.Photoalbum>
+
 @{
     ViewBag.Title = "Фотоалбум";
 }
@@ -21,12 +22,12 @@
                 j = i;
                 <tr>
                     @while (j < i + 4 && j < Model.Count())
-                {
+                    {
                         <td>
                             <img src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData, 0, Model[j].ImageData.Length) " width="200" height="200" />
-                            <br />
-                            @Html.ActionLink("Изтрий", "Delete", new { id = Model[j].ImageId })
-
+                        <br />
+                        @Html.ActionLink("Преглед", "View", new { id = Model[j].ImageId }) |
+                        @Html.ActionLink("Изтрий", "Delete", new { id = Model[j].ImageId })
                         </td>
                         j++;
                     }
