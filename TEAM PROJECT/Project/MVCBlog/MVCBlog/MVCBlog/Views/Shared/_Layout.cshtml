@@ -14,7 +14,6 @@
     <script src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
     <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
     @RenderSection("scripts", required: false)
-    @using MVCBlog.Classes
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,6 +37,7 @@
                     <li>@Html.ActionLink("Участници", "Players", "Home")</li>
                     <li>@Html.ActionLink("История", "History", "Home")</li>
                     <li>@Html.ActionLink("Подготовка", "Preparation", "Home")</li>
+                    <li>@Html.ActionLink("Търсене", "Search.aspx", "SearchEngine")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

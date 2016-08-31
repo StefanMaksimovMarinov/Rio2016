@@ -1,0 +1,19 @@
+﻿body.body-posts2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #ffffff;
+  word-wrap: break-word;
+  background: url("../Images/rio_2016_summer_olympics-HD-2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#GridView1 {
+    background: #f1f6b7;
+    padding: 10px;
+    margin: 0;
+}

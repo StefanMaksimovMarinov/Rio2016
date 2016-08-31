@@ -355,13 +355,13 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #333333;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -3842,7 +3842,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 8px 12px;
+  padding: 8px 8px;
 }
 
 .nav > li > a:hover,
