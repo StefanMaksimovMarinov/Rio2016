@@ -53,7 +53,7 @@ namespace MVCBlog.Controllers
         }
 
 
-        // POST: Photoalbums/Delete/5
+        // GET: Photoalbums/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -68,6 +68,7 @@ namespace MVCBlog.Controllers
             return View(image);
         }
 
+        // POST: Photoalbums/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -86,5 +87,13 @@ namespace MVCBlog.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // GET: Photoalbums/View/ 
+        public ActionResult View(int? id)
+        {
+            Photoalbum image = db.Images.Find(id);
+            return View(image);
+        }
+        
     }
 }  
