@@ -25,9 +25,9 @@
                     {
                         <td>
                             <img src="data:image/png;base64,@Convert.ToBase64String(Model[j].ImageData, 0, Model[j].ImageData.Length) " width="200" height="200" />
-                        <br />
-                        @Html.ActionLink("Преглед", "View", new { id = Model[j].ImageId }) |
-                        @Html.ActionLink("Изтрий", "Delete", new { id = Model[j].ImageId })
+                            <br />
+                            @Html.ActionLink("Изтрий", "Delete", new { id = Model[j].ImageId }) |
+                            @Html.ActionLink("Преглед", "View", new { id = Model[j].ImageId })
                         </td>
                         j++;
                     }
